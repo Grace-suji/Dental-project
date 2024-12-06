@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.home-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  .pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .servhead{
+    font-family: "PT Serif", serif;
+    font-weight:300;
+  }
+  
+  /* Left Section - Text */
+  .text-section {
+    padding: 50px;
+    padding-left:100px;
+  }
+  
+  .text-highlight {
+    color: #0098d8;
+    font-weight: bold;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:30px;
+  }
+  
+  .text-section h1 {
+    color: #0098d8;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:72px;
+  }
+  
+  .text-section p {
+    color: #42474c;
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  .text-section .btn {
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 30px;
+  }
+  
+  .text-section .btn:hover {
+    background-color: #ffd633;
+    text-decoration: none;
+  }
+  
+  /* Right Section - Background Image */
+.home-section {
+    background-image: url("../assets/Home_background.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+  }
+
+  .services-timetable {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    margin: auto;
+  }
+  
+  .service-card {
+    background: #eaf7ff;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    background: #d4efff;
+    transform: translateY(-5px);
+  }
+  
+  .service-card .icon {
+    font-size: 2rem;
+    color: #00a3ff;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h5 {
+    color: #003366;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  /* Timetable Section */
+  .timetable-card {
+    background: #04abe3;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    height:520px;
+  }
+  .timetable-card .timetabe_title{
+    font-weight: bold;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:40px;
+
+  }
+  .timetable-card .timetabe_title span{
+    font-size:40px;
+    line-height: 2.2rem;
+  } 
+  
+  .timetable-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .timetable-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .timetable-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .timetable-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .timetable-card .btn {
+    margin-top: 30px;
+
+
+  }
+  
+  
+
+  @media only screen and (min-width:320px) and (max-width:426px) {
+    .text-section h1 {
+        color: #0098d8;
+        margin-top: 15px;
+        font-weight: bold;
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size:20px;
+      }
+      .timetable-card .btn{
+        margin-top: -12px;
+        margin-left: 70px;
+        padding:5px;
+      }
+    
+  }
+  

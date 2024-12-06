@@ -1,0 +1,68 @@
+.topbar {
+  background-color: #045c7c;
+  height: 80px;
+}
+.top_left span {
+  padding-left: 10px;
+}
+.container {
+  padding-top: 15px;
+  font-size: 18px;
+}
+.collapse ul li {
+  padding-left: 10px;
+}
+.social-icons a {
+  padding-left: 10px;
+}
+
+
+.nav-link {
+  color: #1c374c !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  color: #04abe3 !important;
+  text-decoration: none;
+}
+
+.collapse {
+  margin-right: 20px;
+}
+
+/* Top Bar Social Icons */
+.social-icons a {
+  font-size: 1.2rem;
+}
+
+header {
+  font-family: Arial, sans-serif;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 426px) {
+  .container .top_left {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+    font-size: smaller;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .container .top_left {
+    flex-direction: row;
+  }
+  .container {
+    font-size: smaller;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .topbar {
+    width: 100%;
+  }
+  .collapse ul li {
+    font-size: smaller;
+  }
+}

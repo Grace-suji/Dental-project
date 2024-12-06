@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.service-section{
+  font-family:"PT Serif", serif ;
+  margin-top:20px;
+  margin-bottom:20px;
+  
+}
+.review-box {
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  height: 250px; 
+  width: 750px; /* Keep this as is */
+}
+
+.review-details-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%; 
+}
+
+.review-slide {
+  flex-shrink: 0;
+  width: 100%; 
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.review-image img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.review-details h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-details p {
+  margin: 0;
+}
+
