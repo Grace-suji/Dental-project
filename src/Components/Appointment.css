@@ -1,0 +1,47 @@
+/* Styles for the appointment form */
+.appointment-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-form h2 {
+    color: #333;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 767px) {
+    .appointment-form {
+      padding: 20px;
+    }
+  
+    .appointment-form h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .appointment-form {
+      padding: 30px;
+    }
+  
+    .appointment-form h2 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .appointment-form {
+      padding: 40px;
+    }
+  
+    .appointment-form h2 {
+      font-size: 2rem;
+    }
+  }
+  

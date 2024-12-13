@@ -1,106 +1,59 @@
+.contactbanner img {
+  width: 100%;
+  height: auto;
+}
+
 .contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contactbanner img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .contact-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .contact-details {
-    text-align: justify;
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    margin-bottom: 20px;
-    padding-bottom: 100px;
-  }
-  
-  .contact-details p {
-    margin: 5px 0;
-  }
-  
-  
-  .appointment-form {
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
-    margin-bottom: 20px;
-  }
-  
-  .formbox {
-    padding-top: 20px;
-  }
-  
-  .appointment-form h2 {
-    margin-bottom: 15px;
-  }
-  
-  .appointment-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .appointment-form input,
-  .appointment-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .appointment-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .appointment-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .map {
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .map iframe {
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  @media (min-width: 768px) {
-    .contact-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .contact_content,
-    .appointment-form {
-      width: 45%;
-    }
-  
-    .map iframe {
-      height: 450px;
-    }
-  }
-  
+  font-family: Arial, sans-serif;
+}
+.contact-details{
+  padding-top: 50px;
+}
+
+.contact-details h1, .contact-details h2 {
+  margin-bottom: 20px;
+}
+.appodiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* Ensure it takes the full height of the viewport */
+}
+
+.appointment-form {
+  background-color: #0098d8;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px; /* Adjust based on your design */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.appointment-form h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.appointment-form .btn {
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 1rem auto 0 auto; /* Center the button */
+  padding: 0.5rem 2rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  display: block;
+  border: 1px solid #ddd;
+  background-color: white;
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: white;
+}
