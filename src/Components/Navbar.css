@@ -1,13 +1,14 @@
 .topbar {
   background-color: #045c7c;
   height: 80px;
+  
 }
 .top_left span {
   padding-left: 10px;
 }
 .container {
   padding-top: 15px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .collapse ul li {
   padding-left: 10px;
@@ -39,7 +40,74 @@
 
 header {
   font-family: Arial, sans-serif;
+}.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  width:fit-content;
+
+  
+  
 }
+
+.nav-item.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  position: relative;
+  padding: 8px 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dropdown-item.has-submenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submenu-icon {
+  margin-left: auto;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-item.has-submenu:hover .submenu,
+.submenu.show {
+  display: block;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0078d7;
+}
+
 
 @media only screen and (min-width: 320px) and (max-width: 426px) {
   .container .top_left {

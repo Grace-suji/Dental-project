@@ -3,6 +3,7 @@
   font-family:"PT Serif", serif ;
   margin-top:20px;
   margin-bottom:20px;
+  overflow: hidden;
   
 }
 .review-box {

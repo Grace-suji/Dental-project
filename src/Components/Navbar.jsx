@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../assets/SelvamDental_logo.png";
 import { FaPhoneAlt, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
@@ -6,6 +6,18 @@ import { IoMail } from "react-icons/io5";
 import { FaAddressCard, FaSquareInstagram } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [activeDropdown, setActiveDropdown] = useState(false);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
+
+  const toggleDropdown = () => {
+    setActiveDropdown(!activeDropdown);
+    setActiveSubDropdown(null); // Reset sub-dropdown
+  };
+
+  const toggleSubDropdown = (index) => {
+    setActiveSubDropdown(activeSubDropdown === index ? null : index);
+  };
+
   return (
     <>
       <header>
@@ -77,10 +89,60 @@ const Navbar = () => {
                     ABOUT US
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/treatments">
+                <li
+                  className={`nav-item dropdown ${
+                    activeDropdown ? "show" : ""
+                  }`}
+                >
+                  <a
+                    className="nav-link"
+                    href="#"
+                    onClick={toggleDropdown}
+                  >
                     TREATMENTS
                   </a>
+                  {activeDropdown && (
+                    <ul className="dropdown-menu">
+                      {[
+                        "Orthodontics",
+                        "Conservative Dentistry",
+                        "Prostodontics",
+                        "Periodontics",
+                        "Laser Dentistry",
+                        "Pediatric Dentistry",
+                        "Sedation Dentistry",
+                        "Root Canal Treatment",
+                        "Brushing Techniques",
+                      ].map((item, index) => (
+                        <li
+                          key={index}
+                          className={`dropdown-item ${
+                            index < 4 ? "has-submenu" : ""
+                          }`}
+                          onClick={() => index < 4 && toggleSubDropdown(index)}
+                        >
+                          {item}
+                          {index < 4 && (
+                            <span className="submenu-icon">▶</span>
+                          )}
+                          {index < 4 && activeSubDropdown === index && (
+                            <ul className="submenu">
+                              {[
+                                "Submenu 1",
+                                "Submenu 2",
+                                "Submenu 3",
+                                "Submenu 4",
+                              ].map((subItem, subIndex) => (
+                                <li key={subIndex} className="submenu-item">
+                                  <a href="#">{subItem}</a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/virtual-tour">
