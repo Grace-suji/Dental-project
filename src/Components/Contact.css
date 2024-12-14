@@ -1,59 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 .contactbanner img {
   width: 100%;
   height: auto;
 }
-
-.contact-container {
-  font-family: Arial, sans-serif;
+.contactContainer{
+  font-size: 18px;
+  line-height: 2rem;
 }
-.contact-details{
-  padding-top: 50px;
+.contacthead{
+  font-family: "PT Serif", serif;
+  font-weight:bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+.contactDetails {
+  flex: 1;
+  max-width: 45%;
 }
 
-.contact-details h1, .contact-details h2 {
+.contactDetails p {
+  font-size: 1rem;
+  color: #7f8c8d;
   margin-bottom: 20px;
 }
-.appodiv {
+
+.contactDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactDetails li {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh; /* Ensure it takes the full height of the viewport */
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-.appointment-form {
+.icon {
+  margin-right: 10px;
+  color: #0098d8;
+}
+
+.contactForm {
+  flex: 1;
+  max-width: 45%;
+}
+
+.contactForm h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #34495e;
+  box-sizing: border-box;
+}
+
+.inputGroup textarea {
+  resize: none;
+  height: 100px;
+}
+.form-group{
+  padding-bottom: 10px;
+}
+
+.submitButton {
   background-color: #0098d8;
-  border-radius: 8px;
-  padding: 2rem;
-  max-width: 400px; /* Adjust based on your design */
-  width: 100%;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-.appointment-form h2 {
-  color: white;
-  margin-bottom: 1rem;
+.submitButton:hover {
+  background-color: #007ba7;
 }
 
-.appointment-form .btn {
-  background-color: black;
-  color: white;
-  display: block;
-  margin: 1rem auto 0 auto; /* Center the button */
-  padding: 0.5rem 2rem;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contactDetails,
+  .contactForm {
+    max-width: 100%;
+  }
+
+  .contactDetails h2,
+  .contactForm h2 {
+    font-size: 1.8rem;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea {
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    font-size: 0.9rem;
+  }
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  z-index: 1000;
-  display: block;
-  border: 1px solid #ddd;
-  background-color: white;
-  width: 100%;
+@media (max-width: 375px) {
+  .contactDetails h2,
+  .contactForm h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .submitButton {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
 }
 
-.dropdown-item:hover {
-  background-color: #007bff;
-  color: white;
-}

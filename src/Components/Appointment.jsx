@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Appointment.css"
+import "./Appointment.css";
+import Appointmentimg from "../assets/Appointmentimg.png";
 
 const Appointment = () => {
   const [name, setName] = useState("");
@@ -81,24 +82,21 @@ const Appointment = () => {
   ];
 
   return (
-    <div className="container my-5">
-      <div className="row align-items-center">
-    
-        <div className="col-md-6">
-          <div className="appointment-form p-4 bg-light">
-            <h2 className="mb-4">Make an Appointment</h2>
-            <form className="form-group" onSubmit={handleSubmit}>
-              <input
-                name="name"
-                type="text"
-                className={`form-control mb-3 ${errors.name ? "is-invalid" : ""}`}
-                placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              {errors.name && <div className="invalid-feedback">{errors.name}</div>}
-
-              <input
+    <div className="container-fluid ">
+      <div className="row appointment-container">
+        {/* Left Side: Form */}
+        <div className="col-md-6 form-side">
+          <h2 className="mb-4">Make an Appointment</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Name*"
+              className={`form-control mb-3 ${errors.name ? "is-invalid" : ""}`}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+            <input
                 name="date"
                 type="date"
                 className={`form-control mb-3 ${errors.date ? "is-invalid" : ""}`}
@@ -142,29 +140,35 @@ const Appointment = () => {
               />
               {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
 
-              <input
-                type="email"
-                className={`form-control mb-3 ${errors.email ? "is-invalid" : ""}`}
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+            <input
+              type="email"
+              placeholder="Email*"
+              className={`form-control mb-3 ${errors.email ? "is-invalid" : ""}`}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            {errors.email && <div className="invalid-feedback">{errors.email}</div>}
 
-              <textarea
-                name="message"
-                className={`form-control mb-3 ${errors.message ? "is-invalid" : ""}`}
-                placeholder="Message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
-              {errors.message && <div className="invalid-feedback">{errors.message}</div>}
+            <textarea
+              placeholder="Message"
+              className={`form-control mb-3 ${errors.message ? "is-invalid" : ""}`}
+              rows="4"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+            {errors.message && (
+              <div className="invalid-feedback">{errors.message}</div>
+            )}
 
-              <button type="submit" className="btn btn-primary w-100">
-                Send Message
-              </button>
-            </form>
-          </div>
+            <button type="submit" className="btn btn-primary send-btn">
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
+
+        {/* Right Side: Image */}
+        <div className="col-md-6 image-side">
+          <img src={Appointmentimg} alt="Doctor" className="img-fluid"/>
         </div>
       </div>
     </div>

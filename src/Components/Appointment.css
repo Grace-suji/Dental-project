@@ -1,47 +1,219 @@
-/* Styles for the appointment form */
-.appointment-form {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.appointment-container {
+  background-color: #f9fcff;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-side {
+  padding: 15px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.form-side h2 {
+  color: #333;
+  font-size: 2.2rem;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  padding: 10px;
+  box-shadow: none;
+  background: transparent;
+}
+
+.form-control:focus {
+  border-bottom-color: #0098d8;
+  outline: none;
+  box-shadow: none;
+}
+
+.send-btn {
+  background-color: #0098d8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.send-btn:hover {
+  background-color: #007ba7;
+}
+
+.image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  padding: 15px;
+}
+
+.image-side img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets and small laptops (max-width: 992px) */
+@media (max-width: 992px) {
+  .appointment-container {
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
   }
-  
-  .appointment-form h2 {
-    color: #333;
+
+  .form-side h2 {
+    font-size: 2rem;
   }
-  
-  .dropdown-menu.show {
-    display: block;
-    max-height: 200px;
-    overflow-y: auto;
+
+  .image-side img {
+    max-height: 400px;
   }
-  
-  @media (max-width: 767px) {
-    .appointment-form {
-      padding: 20px;
-    }
-  
-    .appointment-form h2 {
-      font-size: 1.5rem;
-    }
+}
+
+/* Tablets and small devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .appointment-container {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
   }
-  
-  @media (min-width: 768px) and (max-width: 991px) {
-    .appointment-form {
-      padding: 30px;
-    }
-  
-    .appointment-form h2 {
-      font-size: 1.75rem;
-    }
+
+  .form-side {
+    flex: 1;
+    max-width: 50%;
   }
-  
-  @media (min-width: 992px) {
-    .appointment-form {
-      padding: 40px;
-    }
-  
-    .appointment-form h2 {
-      font-size: 2rem;
-    }
+
+  .image-side {
+    flex: 1;
+    max-width: 50%;
   }
-  
+
+  .form-side h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .send-btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .image-side img {
+    max-height: 350px;
+  }
+}
+
+/* Small mobile screens (max-width: 375px) */
+@media (max-width: 375px) {
+  .appointment-container {
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .form-side,
+  .image-side {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .form-side h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .form-control {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .send-btn {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .image-side img {
+    max-height: 300px;
+  }
+}
+
+/* Small mobile screens (max-width: 425px) */
+@media (max-width: 425px) {
+  .appointment-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .form-side,
+  .image-side {
+    max-width: 100%; /* Full width for both sides */
+    flex: none;
+  }
+
+  .form-side h2 {
+    font-size: 1.6rem;
+    text-align: center; /* Center-align the heading */
+  }
+
+  .form-control {
+    font-size: 0.85rem;
+    padding: 8px; /* Smaller padding */
+  }
+
+  .send-btn {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .image-side img {
+    max-height: 300px; /* Resize image for smaller screens */
+  }
+}
+
+
+/* Very small mobile screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .appointment-container {
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .form-side h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-control {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .send-btn {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  .image-side img {
+    max-height: 250px;
+  }
+}
